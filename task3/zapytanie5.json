@@ -1,0 +1,1 @@
+db.people.find({birth_date: {$gt: ISODate("2000-01-01T02:55:03Z"), $lt: ISODate("2100-12-31T02:55:03Z")}})

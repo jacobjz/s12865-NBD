@@ -1,0 +1,33 @@
+1.
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "aa", "surname": "aa", "weight": 100, "human": false}' http://localhost:8098/buckets/s12865/keys/aa
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "bb", "surname": "bb", "weight": 90, "human": false}' http://localhost:8098/buckets/s12865/keys/bb
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "cc", "surname": "cc", "weight": 80, "human": false}' http://localhost:8098/buckets/s12865/keys/cc
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "dd", "surname": "dd", "weight": 85, "human": true}' http://localhost:8098/buckets/s12865/keys/dd
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "ee", "surname": "ee", "weight": 66, "human": false}' http://localhost:8098/buckets/s12865/keys/ee
+
+2.
+curl -i -XGET  http://localhost:8098/buckets/s12865/keys/aa
+
+3.
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "aa", "surname": "aa", "weight": 100, "sex": "M"}' http://localhost:8098/buckets/s12865/keys/aa
+
+4.
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "bb", "surname": "bb", "weight": 90}' http://localhost:8098/buckets/s12865/keys/bb
+
+5.
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "cc", "surname": "cc", "weight": 80, "human": true}' http://localhost:8098/buckets/s12865/keys/cc
+
+6.
+curl -i -XDELETE http://localhost:8098/buckets/s12865/keys/dd
+
+7.
+curl -i -XGET  http://localhost:8098/buckets/s12865/keys/xxx
+
+8.
+curl -i -XPOST -H "Content-Type: application/json" -d '{"jsonfile": "haha"}' http://localhost:8098/buckets/s12865/keys
+
+9.
+curl -i -XGET  http://localhost:8098/buckets/s12865/keys/olvfzhQrJ8e39fIplLmMb5ayugK
+
+10.
+curl -i -XDELETE http://localhost:8098/buckets/s12865/keys/olvfzhQrJ8e39fIplLmMb5ayugK

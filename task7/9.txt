@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+X-Riak-Vclock: l3yKL1MlhyxHGzBPdPh/Rj8Gk5KQJl3LRe18AQgkx6PFQ70VenWQ
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+Link: </buckets/s15407>; rel="up"
+Last-Modified: Thu, 13 May 2021 18:47:15 GMT
+ETag: "yXyNPsxE8xK6mxip2jwO2x"
+Date: Thu, 13 May 2021 18:49:43 GMT
+Content-Type: application/json
+Content-Length: 20
+
+{"jsonfile": "haha"}

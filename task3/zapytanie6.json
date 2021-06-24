@@ -1,0 +1,27 @@
+db.people.insert( {
+  sex: 'Female',
+  first_name: 'Asuka',
+  last_name: 'Kazama',
+  job: 'Tekken fighter',
+  email: 'imgonnakickyourass@hotmail.com',
+  location: {
+    city: 'Tokyo',
+    address: {
+      streetname: 'Shiawase',
+      streetnumber: '1'
+    }
+  },
+  description: "Iron fist tournament is mine",
+  height: 160,
+  weight: 50,
+  birth_date: '2004-10-10T01:11:11Z',
+  nationality: 'Japan',
+  credit: [
+    {
+      type: 'mastercard',
+      number: '123123123123',
+      currency: 'JPY',
+      balance: '1'
+    }
+  ]
+});

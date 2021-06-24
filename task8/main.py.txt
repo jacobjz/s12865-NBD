@@ -1,0 +1,42 @@
+import riak
+riakClient = riak.RiakClient(pb_port=8087)
+
+bucket = riakClient.bucket('s12865_vol2')
+
+pikachu = {
+    "id": 25,
+    "name": {
+        "english": "Pikachu",
+        "japanese": "ピカチュウ",
+    },
+    "type": [
+        "Electric"
+    ],
+    "base": {
+        "HP": 35,
+        "Attack": 55,
+        "Defense": 40,
+        "Sp. Attack": 50,
+        "Sp. Defense": 50,
+        "Speed": 90
+    }
+}
+
+key = bucket.new('pikachu', data=pikachu)
+key.store()
+
+withdrawnpikachu = bucket.get('pikachu')
+print(str(withdrawnpikachu.data))
+
+withdrawnpikachu.data['id'] = 26
+#its now raichu but wathever
+
+withdrawnpikachu.store()
+
+modifiedPikachu = bucket.get('pikachu')
+print(str(modifiedPikachu.data))
+
+modifiedPikachu.delete()
+
+deletedPikachu = bucket.get('pikachu')
+print(str(deletedPikachu.data))
